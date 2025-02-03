@@ -1,17 +1,20 @@
-Інструкція для створення проекту на React та налаштування деплою на GitHub Pages
-Створити новий проект на React з Redux:
+# Frontend Example Project
+
+Цей проект демонструє, як налаштувати React-додаток з Redux та деплоєм на GitHub Pages. Він створений з використанням шаблону `redux` для `create-react-app` і має базову структуру, яка дозволяє легко додавати нові функціональності.
+
+## Кроки для налаштування проекту
+
+### 1. Створення нового проекту на React з Redux
 
 ```bash
 npx create-react-app my-app --template redux
 
-Встановити необхідні залежності, наприклад, react-router-dom:
+### 2. Встановлення залежностей
 
-```bash
 npm install react-router-dom
 
-Видалити зайві файли та папки:
+### 3. Видалення зайвих файлів і папок
 
-```bash
 src/App.test.js
 src/logo.svg
 src/setupTests.js
@@ -23,40 +26,41 @@ public/manifest.json
 public/logo512.png
 public/logo192.png
 
+### 4. Очищення index.html
 Прибрати зайві коментарі з файлу public/index.html і видалити тег:
 
-```bash
 <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-Створити папку src/store та додати в неї файли index.js та файли для слайсів (приклади можна знайти в репозиторії).
+### 5. Структура папки src/store
+Створити папку src/store і додайте файли для Redux слайсів. Зразки файлів можна знайти у репозиторії.
 
-Встановити gh-pages, щоб мати можливість робити деплой на GitHub Pages:
+### 6. Налаштування деплою на GitHub Pages
+Встановити бібліотеку gh-pages для деплою на GitHub Pages:
 
-```bash
 npm install --save-dev gh-pages
 
-Додати властивість "homepage" у файл package.json, щоб вказати URL-адресу для GitHub Pages:
+### 7. Налаштування URL для GitHub Pages
+Додати властивість "homepage" у файл package.json, щоб вказати URL для GitHub Pages:
 
-```bash
 "homepage": "https://denysolkhovykcode.github.io/frontend-example"
 
-Додати скрипти для деплою в package.json:
+### 8. Додавання скриптів для деплою
+У файлі package.json додати наступні скрипти для деплою:
 
-```bash
 "scripts": {
   "predeploy": "npm run build",
   "deploy": "gh-pages -d build"
 }
 
-Картинки завантажувати в папку public/images і використовувати їх наступним чином:
+### 9. Завантаження картинок
+Завантаження картинки в папку public/images і використання їх:
 
-```bash
-<img src={`/frontend-example/images/png.png`} alt="png" />
-<img src={`/frontend-example/images/jpg.jpg`} alt="jpg" />
+<img src={/frontend-example/images/png.png} alt="png" />
+<img src={/frontend-example/images/jpg.jpg} alt="jpg" />
 
-Додати проект на GitHub:
+### 10. Додавання проекту на GitHub
+Ініціалізація git-репозиторію та перший коміт:
 
-```bash
 git init
 git add .
 git commit -m "Initial commit"
@@ -64,7 +68,6 @@ git branch -M main
 git remote add origin https://github.com/DenysOlkhovykCode/frontend-example.git
 git push -u origin main
 
-Запустити деплой на GitHub Pages:
+### 11. Запуск деплою на GitHub Pages
 
-```bash
 npm run deploy
