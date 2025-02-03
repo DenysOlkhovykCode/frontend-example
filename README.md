@@ -1,8 +1,8 @@
-# Frontend Example Project Проект-приклад фронтенд додатку на React з інтеграцією Redux та автоматичним деплоєм на GitHub Pages. 
+Frontend Example Project Проект-приклад фронтенд додатку на React з інтеграцією Redux та автоматичним деплоєм на GitHub Pages. 
 
-## Кроки для налаштування проекту 
+Кроки для налаштування проекту 
 
-### 1. Створення нового проекту на React з Redux
+1. Створення нового проекту на React з Redux
 ```bash
 npx create-react-app my-app --template redux
 ### 2. Встановлення залежностей
