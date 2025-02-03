@@ -1,46 +1,60 @@
-# Getting Started with Create React App and Redux
+Інструкція для створення проекту на React та налаштування деплою на GitHub Pages
+Створити новий проект на React з Redux:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+npx create-react-app my-app --template redux
 
-## Available Scripts
+Встановити необхідні залежності, наприклад, react-router-dom:
 
-In the project directory, you can run:
+npm install react-router-dom
 
-### `npm start`
+Видалити зайві файли та папки:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+src/App.test.js
+src/logo.svg
+src/setupTests.js
+src/reportWebVitals.js
+src/app
+src/features
+public/robots.txt
+public/manifest.json
+public/logo512.png
+public/logo192.png
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Прибрати зайві коментарі з файлу public/index.html і видалити тег:
 
-### `npm test`
+<link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Створити папку src/store та додати в неї файли index.js та файли для слайсів (приклади можна знайти в репозиторії).
 
-### `npm run build`
+Встановити gh-pages, щоб мати можливість робити деплой на GitHub Pages:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+npm install --save-dev gh-pages
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Додати властивість "homepage" у файл package.json, щоб вказати URL-адресу для GitHub Pages:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+"homepage": "https://denysolkhovykcode.github.io/frontend-example"
 
-### `npm run eject`
+Додати скрипти для деплою в package.json:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+"scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+}
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Картинки завантажувати в папку public/images і використовувати їх наступним чином:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<img src={`/frontend-example/images/png.png`} alt="png" />
+<img src={`/frontend-example/images/jpg.jpg`} alt="jpg" />
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Додати проект на GitHub:
 
-## Learn More
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/DenysOlkhovykCode/frontend-example.git
+git push -u origin main
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Запустити деплой на GitHub Pages:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+npm run deploy
