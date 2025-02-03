@@ -1,8 +1,8 @@
 function Images() {
   return (
     <div className="images">
-      <img src="/images/png.png" alt="png" />
-      <img src="/images/jpg.jpg" alt="jpg" />
+      <img src={`/frontend-example/images/png.png`} alt="png" />
+      <img src={`/frontend-example/images/jpg.jpg`} alt="jpg" />
     </div>
   );
 }
