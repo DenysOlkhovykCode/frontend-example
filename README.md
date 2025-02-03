@@ -3,7 +3,6 @@ Frontend Example Project Проект-приклад фронтенд додат
 Кроки для налаштування проекту 
 
 1. Створення нового проекту на React з Redux
-```bash
 npx create-react-app my-app --template redux
 2. Встановлення залежностей
 npm install react-router-dom
