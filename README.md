@@ -80,7 +80,7 @@ const navigate = useNavigate();
 <Link to="/about">Про нас</Link>
 ```
 
-9. Завантаження картинок
+10. Завантаження картинок
 Завантажити картинки до public/images
 Використовувати у коді:
 ```bash
@@ -88,7 +88,7 @@ const navigate = useNavigate();
 <img src="/frontend-example/images/jpg.jpg" alt="jpg" />
 ```
 
-10. Додавання проекту на GitHub
+11. Додавання проекту на GitHub
 ```bash
 git init
 git add .
@@ -98,7 +98,7 @@ git remote add origin https://github.com/DenysOlkhovykCode/frontend-example.git
 git push -u origin main
 ```
 
-11. Запуск деплою на GitHub Pages
+12. Запуск деплою на GitHub Pages
 ```bash
 npm run deploy
 ```
