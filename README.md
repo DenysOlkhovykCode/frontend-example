@@ -55,6 +55,31 @@ npm install --save-dev gh-pages
 "deploy": "gh-pages -d build"
 ```
 
+9. Налаштування React Router
+В index.js додати
+```bash
+import { HashRouter } from "react-router-dom";
+
+<HashRouter basename="/">
+  <App />
+</HashRouter>
+```
+
+Там де треба зробити перехід на інші сторінки 
+
+```bash
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+
+const navigate = useNavigate();
+<Routes>
+  <Route path="/about" element={"Про сторінку"} />
+  <Route path="*" element={"Сторінка 404"} />
+</Routes>
+<button onClick={() => navigate("/about")}>Перейти на About</button>
+<Link to="/about">Про нас</Link>
+```
+
 9. Завантаження картинок
 Завантажити картинки до public/images
 Використовувати у коді:
