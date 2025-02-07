@@ -14,9 +14,7 @@ npm install react-router-dom
 
 3. Видалення зайвих файлів і папок
 ```bash
-src/App.test.js
 src/logo.svg
-src/setupTests.js
 src/reportWebVitals.js
 src/app
 src/features
@@ -33,27 +31,27 @@ public/logo192.png
 <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 ```
 
-5. Структура папки src/store
-Створити папку src/store
-Додати файли для Redux слайсів (зразки у репозиторії)
-
-6. Налаштування деплою на GitHub Pages
+5. Налаштування деплою на GitHub Pages
 ```bash
 npm install --save-dev gh-pages
 ```
 
-7. Налаштування URL для GitHub Pages
+6. Налаштування URL для GitHub Pages
 Додати у package.json:
 ```bash
 "homepage": "https://denysolkhovykcode.github.io/frontend-example"
 ```
 
-8. Додавання скриптів для деплою
+7. Додавання скриптів для деплою
 Додати у розділ scripts файлу package.json:
 ```bash
 "predeploy": "npm run build",
 "deploy": "gh-pages -d build"
 ```
+
+8. Структура папки src/store
+Створити папку src/store
+Додати файли для Redux слайсів (зразки у репозиторії)
 
 9. Налаштування React Router
 В index.js додати
@@ -68,8 +66,9 @@ import { HashRouter } from "react-router-dom";
 Там де треба зробити перехід на інші сторінки 
 
 ```bash
-import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { Routes, Route } from "react-router";
+import { useNavigate } from "react-router";
+import { Link } from "react-router";
 
 const navigate = useNavigate();
 <Routes>
@@ -88,7 +87,10 @@ const navigate = useNavigate();
 <img src="/frontend-example/images/jpg.jpg" alt="jpg" />
 ```
 
-11. Додавання проекту на GitHub
+11. Тестування коду за прикладом в App.test.js
+Використовувати import { MemoryRouter } from "react-router" в тестах 
+
+12. Додавання проекту на GitHub
 ```bash
 git init
 git add .
@@ -98,7 +100,7 @@ git remote add origin https://github.com/DenysOlkhovykCode/frontend-example.git
 git push -u origin main
 ```
 
-12. Запуск деплою на GitHub Pages
+13. Запуск деплою на GitHub Pages
 ```bash
 npm run deploy
 ```
