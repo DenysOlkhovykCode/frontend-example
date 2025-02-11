@@ -11,6 +11,7 @@ npx create-react-app my-app --template redux
 ```bash
 cd my-app
 npm install react-router-dom
+npm install react-redux @reduxjs/toolkit
 ```
 
 3. Видалення зайвих файлів і папок
