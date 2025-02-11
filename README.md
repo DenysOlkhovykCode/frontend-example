@@ -12,6 +12,7 @@ npx create-react-app my-app --template redux
 cd my-app
 npm install react-router-dom
 npm install react-redux @reduxjs/toolkit
+npm install --save-dev @testing-library/jest-dom
 ```
 
 3. Видалення зайвих файлів і папок
