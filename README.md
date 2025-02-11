@@ -9,6 +9,7 @@ npx create-react-app my-app --template redux
 
 2. Встановлення залежностей
 ```bash
+cd my-app
 npm install react-router-dom
 ```
 
@@ -88,7 +89,10 @@ const navigate = useNavigate();
 ```
 
 11. Тестування коду за прикладом в App.test.js
-Використовувати import { MemoryRouter } from "react-router" в тестах 
+Використовувати в тестах
+```bash
+import { MemoryRouter } from "react-router" 
+```
 
 12. Додавання проекту на GitHub
 ```bash
